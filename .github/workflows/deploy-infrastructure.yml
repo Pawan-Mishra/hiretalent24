@@ -1,0 +1,11 @@
+name: Deploy Infrastructure
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    permissions: {}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploy infrastructure workflow placeholder"
