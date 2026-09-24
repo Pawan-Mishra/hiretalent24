@@ -5,6 +5,7 @@ on:
 
 jobs:
   deploy:
+    permissions: {}
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deploy website workflow placeholder"
