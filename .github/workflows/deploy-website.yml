@@ -1,11 +1,11 @@
-name: Deploy HireTalent24 Infrastructure
+name: Deploy HireTalent24 Website
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'infrastructure/**'
+      - 'website/**'
 
 permissions:
   id-token: write
@@ -25,9 +25,12 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: ap-south-1
 
-      - name: Deploy CloudFormation
+      - name: Deploy website to S3
         run: |
-          aws cloudformation deploy \
-            --template-file infrastructure/template.yaml \
-            --stack-name hiretalent24-infrastructure \
-            --region ap-south-1
+          aws s3 sync website/ s3://${{ secrets.S3_BUCKET }} --delete
+
+      - name: Invalidate CloudFront
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
