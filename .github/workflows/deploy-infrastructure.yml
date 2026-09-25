@@ -30,4 +30,6 @@ jobs:
           aws cloudformation deploy \
             --template-file infrastructure/template.yaml \
             --stack-name hiretalent24-infrastructure \
-            --region ap-south-1
+            --region ap-south-1 \
+            --parameter-overrides \
+              AcmCertificateArn=${{ secrets.ACM_CERTIFICATE_ARN }}

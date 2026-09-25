@@ -2,6 +2,12 @@ AWSTemplateFormatVersion: '2010-09-09'
 
 Description: HireTalent24 static website infrastructure
 
+Parameters:
+
+  AcmCertificateArn:
+    Type: String
+    Description: ACM certificate ARN for HireTalent24
+
 Resources:
 
   WebsiteBucket:
@@ -32,6 +38,16 @@ Resources:
       DistributionConfig:
         Enabled: true
         Comment: HireTalent24 website
+
+        Aliases:
+          - hiretalent24.com
+          - www.hiretalent24.com
+
+        ViewerCertificate:
+          AcmCertificateArn: !Ref AcmCertificateArn
+          SslSupportMethod: sni-only
+          MinimumProtocolVersion: TLSv1.2_2021
+
         DefaultRootObject: index.html
 
         Origins:
