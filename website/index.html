@@ -227,17 +227,73 @@
 
     <section id="legal" class="section legal">
       <div class="container legal-grid">
-        <article id="terms">
+        <article id="terms" data-reveal>
           <div class="section-kicker">TERMS OF SERVICE</div>
           <h2>Terms of Service</h2>
           <p>These Terms of Service govern your use of the HireTalent24 website and services. HireTalent24 LLC is the service provider and contracting entity for this website.</p>
           <p>By using this website, you agree to comply with these terms and all applicable laws. HireTalent24 LLC may update these terms from time to time by posting revised terms on this page.</p>
         </article>
-        <article id="privacy">
+        <article id="privacy" class="privacy-card" data-reveal>
           <div class="section-kicker">PRIVACY POLICY</div>
           <h2>Privacy Policy</h2>
-          <p>HireTalent24 LLC operates this website and is the data controller for personal information collected through its contact and registration forms, unless otherwise stated.</p>
-          <p>We use submitted information to respond to inquiries, support staffing and recruitment services, and maintain our business communications. Questions about this policy may be directed to HireTalent24 LLC at the contact details listed above.</p>
+          <p class="privacy-intro">HireTalent24 LLC operates this website and is the data controller for personal information collected through its contact and registration forms.</p>
+          <div class="privacy-accordion">
+            <div class="privacy-item">
+              <h3>
+                <button class="privacy-accordion-trigger" type="button" aria-expanded="false" aria-controls="privacy-collect">
+                  <span>1. Information We Collect</span>
+                  <svg aria-hidden="true" viewBox="0 0 20 20" focusable="false"><path d="m5 7.5 5 5 5-5" /></svg>
+                </button>
+              </h3>
+              <div id="privacy-collect" class="privacy-accordion-panel" role="region" aria-hidden="true">
+                <div class="privacy-accordion-content"><p>We collect the information you choose to provide through contact and registration forms, such as your name, email address, company details, staffing requirements, skills, and career preferences.</p></div>
+              </div>
+            </div>
+            <div class="privacy-item">
+              <h3>
+                <button class="privacy-accordion-trigger" type="button" aria-expanded="false" aria-controls="privacy-use">
+                  <span>2. How We Use Information</span>
+                  <svg aria-hidden="true" viewBox="0 0 20 20" focusable="false"><path d="m5 7.5 5 5 5-5" /></svg>
+                </button>
+              </h3>
+              <div id="privacy-use" class="privacy-accordion-panel" role="region" aria-hidden="true">
+                <div class="privacy-accordion-content"><p>We use submitted information to respond to inquiries, support staffing and recruitment services, communicate about opportunities, and improve our website and services.</p></div>
+              </div>
+            </div>
+            <div class="privacy-item">
+              <h3>
+                <button class="privacy-accordion-trigger" type="button" aria-expanded="false" aria-controls="privacy-sharing">
+                  <span>3. Data Sharing &amp; Third Parties</span>
+                  <svg aria-hidden="true" viewBox="0 0 20 20" focusable="false"><path d="m5 7.5 5 5 5-5" /></svg>
+                </button>
+              </h3>
+              <div id="privacy-sharing" class="privacy-accordion-panel" role="region" aria-hidden="true">
+                <div class="privacy-accordion-content"><p>We may share information with service providers that help us operate the website or deliver our services. We do not sell personal information.</p></div>
+              </div>
+            </div>
+            <div class="privacy-item">
+              <h3>
+                <button class="privacy-accordion-trigger" type="button" aria-expanded="false" aria-controls="privacy-security">
+                  <span>4. Security &amp; Retention</span>
+                  <svg aria-hidden="true" viewBox="0 0 20 20" focusable="false"><path d="m5 7.5 5 5 5-5" /></svg>
+                </button>
+              </h3>
+              <div id="privacy-security" class="privacy-accordion-panel" role="region" aria-hidden="true">
+                <div class="privacy-accordion-content"><p>HireTalent24 LLC uses reasonable safeguards for personal information and retains it only as long as needed for the purposes described in this policy or as required by law.</p></div>
+              </div>
+            </div>
+            <div class="privacy-item">
+              <h3>
+                <button class="privacy-accordion-trigger" type="button" aria-expanded="false" aria-controls="privacy-rights">
+                  <span>5. Contact &amp; Data Rights</span>
+                  <svg aria-hidden="true" viewBox="0 0 20 20" focusable="false"><path d="m5 7.5 5 5 5-5" /></svg>
+                </button>
+              </h3>
+              <div id="privacy-rights" class="privacy-accordion-panel" role="region" aria-hidden="true">
+                <div class="privacy-accordion-content"><p>Questions about this policy or requests regarding your personal information may be directed to HireTalent24 LLC at <a href="mailto:hr@hiretalent24.com">hr@hiretalent24.com</a>.</p></div>
+              </div>
+            </div>
+          </div>
         </article>
       </div>
     </section>

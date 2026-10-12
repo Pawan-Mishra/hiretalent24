@@ -34,6 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
     revealItems.forEach(item => item.classList.add("is-visible"));
   }
 
+  document.querySelectorAll(".privacy-accordion-trigger").forEach(trigger => {
+    const panel = document.getElementById(trigger.getAttribute("aria-controls"));
+
+    trigger.addEventListener("click", () => {
+      const expanded = trigger.getAttribute("aria-expanded") === "true";
+      trigger.setAttribute("aria-expanded", String(!expanded));
+      panel.style.maxHeight = expanded ? "0px" : `${panel.scrollHeight}px`;
+      panel.setAttribute("aria-hidden", String(expanded));
+    });
+  });
+
   // Demo form behavior. Replace with your backend/API endpoint when available.
   document.querySelectorAll("form[data-form-type]").forEach(form => {
     form.addEventListener("submit", event => {
